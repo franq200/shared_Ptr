@@ -41,7 +41,7 @@ TEST_F(SharedPtrTests, GivenSharedPtr_WhenSharedPtrIsCopiedIsCalled_ThenUseCount
     EXPECT_EQ(ptr.UseCount(), 1);
     {
         SharedPtr<int> ptr2(ptr);
-        EXPECT_EQ(ptr2.UseCount(), 2);
+        EXPECT_EQ(ptr2.UseCount(), 2)
         EXPECT_EQ(ptr.UseCount(), 2);
     }
     EXPECT_EQ(ptr.UseCount(), 1);
