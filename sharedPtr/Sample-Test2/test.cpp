@@ -68,3 +68,22 @@ TEST_F(SharedPtrTests, GivenTwoSharedPtrs_WhenAssignmentsOperatorIsCalled_ThenIt
     ptr = ptr2;
     EXPECT_EQ(ptr.Get(), ptr2.Get());
 }
+
+TEST_F(SharedPtrTests, GivenTwoEqualSharedPtrs_WhenEqualOperatorIsCalled_ThenItShouldReturnTrue)
+{
+    SharedPtr<int> ptr(new int(3));
+    SharedPtr<int> ptr2(new int(5));
+    ptr = ptr2;
+    EXPECT_EQ(ptr, ptr2);
+}
+
+TEST_F(SharedPtrTests, GivenSharedPtr_WhenArrowOperatorIsCalled_ThenItShouldReturn4)
+{
+    struct MyStruct
+    {
+        int number = 6;
+    };
+    SharedPtr<MyStruct> shared_ptr(new MyStruct);
+    shared_ptr->number = 4;
+    EXPECT_EQ(shared_ptr->number, 4);
+}
