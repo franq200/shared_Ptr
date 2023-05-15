@@ -53,7 +53,7 @@ int main()
 	
 	SharedPtr<int> ptr(new int(5));
 	
-	if (ptr.operator_bool())
+	if (ptr)
 	{
 		std::cout << "zwraca";
 	}
@@ -61,7 +61,8 @@ int main()
 	{
 		std::cout << "nie zwraca";
 	}
-	/*
+	
+	
 	SharedPtr<int> ptr2(new int(5));
 	
 	std::cout << *(ptr.Get());
@@ -69,6 +70,7 @@ int main()
 	ptr = ptr2;
 	std::cout << *(ptr.Get());
 	std::cout << ptr.UseCount();
+	
 	
 	if (ptr == ptr2)
 	{
@@ -78,6 +80,6 @@ int main()
 	{
 		std::cout << "inne";
 	}
-	*/
+	
 	return true;
 }
