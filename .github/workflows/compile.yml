@@ -46,4 +46,4 @@ jobs:
     - name: Run unit tests
       id: run_tests
       working-directory: ${{env.SOLUTION_FILE_PATH}}\x64\Release\
-      run: Sample-Test2.exe
+      run: Start-Process -FilePath "${{env.SOLUTION_FILE_PATH}}\x64\Release\Sample-Test2.exe"
