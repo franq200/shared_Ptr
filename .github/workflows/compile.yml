@@ -45,5 +45,5 @@ jobs:
       
     - name: Run unit tests
       id: run_tests
-      working-directory: ${{env.GITHUB_WORKSPACE}}\x64\Debug\
+      working-directory: ${{env.SOLUTION_FILE_PATH}}\x64\Release\
       run: Sample-Test2.exe
